@@ -13,7 +13,8 @@
 
                   <h4 class="card-title">Edit Profile Page</h4>
                  
-                  <form>
+                  <form method="post" action="{{ route('store.profile')}}" enctype="multipart/form-data">
+                    @csrf
                   <div class="row mb-3">
                       <label for="example-text-input" class="col-sm-2 col-form-label">Name</label>
                       <div class="col-sm-10">
@@ -53,7 +54,7 @@
               </div>
           </div>
           <!-- end row -->
-          <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Profile"
+          <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Profile">
 
             
                   </form>
