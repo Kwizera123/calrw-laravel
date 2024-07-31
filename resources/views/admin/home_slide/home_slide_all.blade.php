@@ -25,19 +25,12 @@
                   </div>
                   <!-- end row -->
 
-                  {{-- <div class="mb-3">
-                    <label>Descreption</label>
-                    <div>
-                        <textarea name="descreption" class="form-control" type="text" value="{{$homeslide->descreption}}" rows="5"></textarea>
+                  <div class="row mb-3">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">Descreption</label>
+                    <div class="col-sm-10">
+                        <textarea name="descreption" class="form-control" type="text" rows="5">{{$homeslide->descreption}}</textarea>
                     </div>
-                </div> --}}
-
-                <div class="row mb-3">
-                  <label for="example-text-input" class="col-sm-2 col-form-label">Descreption</label>
-                  <div class="col-sm-10">
-                      <input name="descreption" class="form-control" type="text" value="{{$homeslide->descreption}}" id="example-text-input">
-                  </div>
-              </div>
+                </div>
               <!-- end row -->
 
 
