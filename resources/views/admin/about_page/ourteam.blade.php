@@ -14,14 +14,22 @@
 
                   <h4 class="card-title">OurTeam</h4>
                  
-                  <form method="post" action="{{ route('update.ourteam')}}" enctype="multipart/form-data">
+                  <form method="post" action="{{ route('store.ourteam')}}" enctype="multipart/form-data">
                     @csrf
 
-                  <input type="hidden" name="id" value="{{ $ourteam->id }}">
+                   
+                  <div class="row mb-3">
+                      <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
+                      <div class="col-sm-10">
+                          <input name="title" class="form-control" type="text"  id="example-text-input">
+                      </div>
+                  </div>
+                  <!-- end row -->
+
               <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Photo</label>
                 <div class="col-sm-10">
-                    <input name="photo" class="form-control" type="file"  id="image">
+                    <input name="photo[]" class="form-control" type="file"  id="image" multiple="">
                 </div>
             </div>
             <!-- end row -->
@@ -37,7 +45,7 @@
           <div class="row mb-3">
             <label for="example-text-input" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
-                <input name="name" class="form-control" type="text" value="{{$ourteam->name}}" id="example-text-input">
+                <input name="name" class="form-control" type="text" id="example-text-input">
             </div>
         </div>
         <!-- end row -->
@@ -45,7 +53,7 @@
           <div class="row mb-3">
             <label for="example-text-input" class="col-sm-2 col-form-label">Role</label>
             <div class="col-sm-10">
-                <input name="role" class="form-control" type="text" value="{{$ourteam->role}}" id="example-text-input">
+                <input name="role" class="form-control" type="text" id="example-text-input">
             </div>
         </div>
         <!-- end row -->
@@ -55,12 +63,12 @@
                     <label for="example-text-input" class="col-sm-2 col-form-label">Description</label>
                     <div class="col-sm-10">
                         {{-- <textarea name="descreption" class="form-control" type="text" rows="5">{{$aboutpage->short_descreption}}</textarea> --}}
-                        <textarea id="elm1" name="description">{{$ourteam->description}}</textarea>
+                        <textarea id="elm1" name="description"></textarea>
                     </div>
                 </div>
               <!-- end row -->
 
-          <input type="submit" class="btn btn-info waves-effect waves-light" value="Update OurTeam Page">
+          <input type="submit" class="btn btn-info waves-effect waves-light" value="Submit OurTeam Page">
 
             
                   </form>

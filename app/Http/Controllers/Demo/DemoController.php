@@ -13,5 +13,9 @@ class DemoController extends Controller
 
     public function ContactMethod(){
         return view('contact');
+    }// End ContactMethod
+
+    public function HomeMain(){
+        return view('frontend.index');
     }
 }

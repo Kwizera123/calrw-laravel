@@ -11,16 +11,16 @@
           <div class="card">
               <div class="card-body">
 
-                  <h4 class="card-title">Home Slide Page</h4>
+                  <h4 class="card-title">Edit Home Slide</h4>
                  
                   <form method="post" action="{{ route('update.slider')}}" enctype="multipart/form-data">
                     @csrf
 
-                    <input type="hidden" name="id" value="{{$homeslide->id}}">
+                    <input type="hidden" name="id" value="{{$edithomeslide->id}}">
                   <div class="row mb-3">
                       <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
                       <div class="col-sm-10">
-                          <input name="title" class="form-control" type="text" value="{{$homeslide->title}}" id="example-text-input">
+                          <input name="title" class="form-control" type="text" value="{{$edithomeslide->title}}" id="example-text-input">
                       </div>
                   </div>
                   <!-- end row -->
@@ -28,7 +28,7 @@
                   <div class="row mb-3">
                     <label for="example-text-input" class="col-sm-2 col-form-label">Descreption</label>
                     <div class="col-sm-10">
-                        <textarea name="descreption" class="form-control" type="text" rows="5">{{$homeslide->descreption}}</textarea>
+                        <textarea name="descreption" class="form-control" type="text" rows="5">{{$edithomeslide->descreption}}</textarea>
                     </div>
                 </div>
               <!-- end row -->
@@ -39,7 +39,7 @@
                   <div class="row mb-3">
                     <label for="example-text-input" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                        <input name="name" class="form-control" type="text" value="{{$homeslide->name}}" id="example-text-input">
+                        <input name="name" class="form-control" type="text" value="{{$edithomeslide->name}}" id="example-text-input">
                     </div>
                 </div>
                 <!-- end row -->
@@ -47,7 +47,7 @@
                 <div class="row mb-3">
                   <label for="example-text-input" class="col-sm-2 col-form-label">Short Title</label>
                   <div class="col-sm-10">
-                      <input name="short_title" class="form-control" type="text" value="{{$homeslide->short_title}}" id="example-text-input">
+                      <input name="short_title" class="form-control" type="text" value="{{$edithomeslide->short_title}}" id="example-text-input">
                   </div>
               </div>
               <!-- end row -->
@@ -63,7 +63,7 @@
             <div class="row mb-3">
               <label for="example-text-input" class="col-sm-2 col-form-label"></label>
               <div class="col-sm-10">
-                <img id="showImage" class="rounded avatar-lg" src="{{ (!empty($homeslide->home_slider))? url($homeslide->home_slider):url('upload/no_image.jpg') }}" alt="CAL Image">   
+                <img id="showImage" class="rounded avatar-lg" src="{{ (!empty($edithomeslide->home_slider))? url($edithomeslide->home_slider):url('upload/no_image.jpg') }}" alt="CAL Image">   
               </div>
           </div>
           <!-- end row -->

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\About;
 use App\Models\ChooseUs;
 use App\Models\OurTeam;
+use Illuminate\Support\Carbon;
 //use Image;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -120,13 +121,54 @@ class AboutController extends Controller
 
     }// End Method
 
-    public function OurTeam(){
+   
+    public function AllOurTeam(){
         $ourteam = OurTeam::find(1);
+        return view('admin.about_page.ourteam',compact('ourteam'));
+    }// End Method
+
+    public function StoreOurteam(Request $request) {
+        $image = $request->file('photo');
+
+        foreach ($image as $photo) {
+
+            $name_gen = hexdec(uniqid()).'.'.$photo->getClientOriginalExtension();//3454555.jpg
+            Image::make($photo)->resize(800,800)->save('upload/ourteam_image/'.$name_gen);
+            $save_url = 'upload/ourteam_image/'.$name_gen;
+
+            OurTeam::insert([
+               
+                'name' => $request->name, 
+                'role' => $request->role,
+                'description' => $request->description,              
+                'photo' => $save_url,
+                'created_at' => Carbon::now()
+            ]);
+
+        }// End of foreach
+            $notification = array(
+                'message' => 'Ourteam Page Inserted with Image Successfully',
+                'alert-type' => 'success'
+            );
+        
+            return redirect()->back()->with($notification);
+  
+    }// End of Method
+
+    public function OurteamAbout() {
+        $allOurteamAbout = OurTeam::all();
+        return view('admin.about_page.all_ourteam',compact('allOurteamAbout'));
+    }// End of Method
+
+    public function EditOurTeam($id){
+        $ourteam = OurTeam::findOrFail($id);
         return view('admin.about_page.ourteam_page',compact('ourteam'));
     }// End Method
 
     public function UpdateOurteam(Request $request){
+
         $ourteam_id = $request->id;
+
         if($request->file('photo')) {
             $image = $request->file('photo');
             $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();//3454555.jpg
@@ -134,7 +176,7 @@ class AboutController extends Controller
             $save_url = 'upload/ourteam_image/'.$name_gen;
 
             OurTeam::findOrFail($ourteam_id)->update([
-                'title' => $request->title,
+               
                 'name' => $request->name, 
                 'role' => $request->role,
                 'description' => $request->description,              
@@ -149,7 +191,7 @@ class AboutController extends Controller
             
         }else{
             OurTeam::findOrFail($ourteam_id)->update([
-                'title' => $request->title,
+                
                 'name' => $request->name,
                 'role' => $request->role,
                 'description' => $request->description,   
@@ -160,8 +202,25 @@ class AboutController extends Controller
                 'message' => 'Ourteam Page Updated without Image Successfully',
                 'alert-type' => 'info'
             );
-            return redirect()->back()->with($notification);
+            return redirect()->route('ourteam.about.page')->with($notification);
 
         } //end else condition
+    }// End of Method
+
+    public function DeleteOurTeam($id) {
+            $ourteam = OurTeam::findOrFail($id);
+            $name = $ourteam->name;
+            $role = $ourteam->role;
+            $description = $ourteam->description;
+            $photo = $ourteam->photo;
+            unlink($photo);
+
+            OurTeam::findOrFail($id)->delete();
+
+            $notification = array(
+                'message' => 'Ourteam Page Deleted Successfully',
+                'alert-type' => 'danger'
+            );
+            return redirect()->back()->with($notification);
     }
 }

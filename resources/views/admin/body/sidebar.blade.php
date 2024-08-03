@@ -25,7 +25,8 @@
                       <span>Home Slider Setup</span>
                   </a>
                   <ul class="sub-menu" aria-expanded="false">
-                      <li><a href="{{ route('home.slide')}}">Home Slider</a></li>
+                      
+                      <li><a href="{{ route('allhome.slide')}}">All Home Slider</a></li>
                       
                   </ul>
               </li>
@@ -39,27 +40,26 @@
                   <ul class="sub-menu" aria-expanded="false">
                     <li><a href="{{ route('about.page')}}">About us</a></li>
                     <li><a href="{{ route('about.chooseus')}}">Why Choose Us</a></li>
-                    <li><a href="{{ route('ourteam.page')}}">Our Team</a></li>
+                    <li><a href="{{ route('allourteam.page')}}">Add New OurTeam</a></li>
+                    <li><a href="{{ route('ourteam.about.page')}}">All OurTeam View</a></li>
                 </ul>
     
               </li>
 
-              <li class="menu-title">Pages</li>
+              {{-- <li class="menu-title">Pages</li> --}}
 
               <li>
                   <a href="javascript: void(0);" class="has-arrow waves-effect">
                       <i class="ri-account-circle-line"></i>
-                      <span>Authentication</span>
+                      <span>Services</span>
                   </a>
                   <ul class="sub-menu" aria-expanded="false">
-                      <li><a href="auth-login.html">Login</a></li>
-                      <li><a href="auth-register.html">Register</a></li>
-                      <li><a href="auth-recoverpw.html">Recover Password</a></li>
-                      <li><a href="auth-lock-screen.html">Lock Screen</a></li>
+                      <li><a href="{{  route('header.service.page') }}">Header Service</a></li>
+                      <li><a href="{{  route('our.service.page') }}">Our Service</a></li>
                   </ul>
               </li>
 
-              <li>
+              {{-- <li>
                   <a href="javascript: void(0);" class="has-arrow waves-effect">
                       <i class="ri-profile-line"></i>
                       <span>Utility</span>
@@ -72,7 +72,7 @@
                       <li><a href="pages-404.html">Error 404</a></li>
                       <li><a href="pages-500.html">Error 500</a></li>
                   </ul>
-              </li>
+              </li> --}}
 
           </ul>
       </div>
