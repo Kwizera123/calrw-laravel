@@ -1,10 +1,3 @@
-<!-- /*
-* Bootstrap 5
-* Template Name: Furni
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 
 <!doctype html>
 <html lang="en">
@@ -22,6 +15,9 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="{{ asset('frontend/assets/css/tiny-slider.css') }}" rel="stylesheet">
 		<link href="{{ asset('frontend/assets/css/style.css') }}" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
+	
 		<title>CALRWANDA</title>
 	</head>
 
@@ -68,6 +64,33 @@
 		<script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>
 		<script src="{{ asset('frontend/assets/js/tiny-slider.js') }}"></script>
 		<script src="{{ asset('frontend/assets/js/custom.js') }}"></script>
+
+
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+		<script>
+		 @if(Session::has('message'))
+		 var type = "{{ Session::get('alert-type','info') }}"
+		 switch(type){
+				case 'info':
+				toastr.info(" {{ Session::get('message') }} ");
+				break;
+		
+				case 'success':
+				toastr.success(" {{ Session::get('message') }} ");
+				break;
+		
+				case 'warning':
+				toastr.warning(" {{ Session::get('message') }} ");
+				break;
+		
+				case 'error':
+				toastr.error(" {{ Session::get('message') }} ");
+				break; 
+		 }
+		 @endif 
+		</script>
 	</body>
 
 </html>

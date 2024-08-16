@@ -95,6 +95,9 @@ use App\Http\Controllers\Home\ContactController;
     // contact routes
     Route::controller(ContactController::class)->group(function(){
       Route::get('/contact/page', 'ContactPage')->name('home.contact');
+      Route::post('/store/message', 'StoreContact')->name('store.message');
+      Route::get('/contact/message', 'ContactMessage')->name('contact.message');
+      Route::get('/delete/message/{id}', 'DeleteMessage')->name('delete.message');
   
    });
     

@@ -1,6 +1,7 @@
 @extends('frontend.main_master')
 @section('main')
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<!-- Start Hero Section -->
     <div class="hero">
       <div class="container">
@@ -74,33 +75,52 @@
                 </div>
               </div>
 
-              {{-- <form>
+               <form method="post" action="{{ route('store.message')}}">
+                @csrf
+                
                 <div class="row">
                   <div class="col-6">
                     <div class="form-group">
-                      <label class="text-black" for="fname">First name</label>
-                      <input type="text" class="form-control" id="fname">
+                      <label class="text-black" for="firstname">Your First name</label>
+                      <input type="text" name="firstname" class="form-control" id="fname" required>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="form-group">
-                      <label class="text-black" for="lname">Last name</label>
-                      <input type="text" class="form-control" id="lname">
+                      <label class="text-black" for="lastname">Your Last name</label>
+                      <input type="text" name="lastname" class="form-control" id="lname" required>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="text-black" for="email">Email address</label>
-                  <input type="email" class="form-control" id="email">
+                  <label class="text-black" for="email">Your Email address</label>
+                  <input type="email" name="email" class="form-control" id="email" required>
                 </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label class="text-black" for="telephone">Your Phone Number</label>
+                      <input type="text" name="telephone" class="form-control" id="telephone" required>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label class="text-black" for="subject">Your Subject</label>
+                      <input type="text" name="subject" class="form-control" id="subject">
+                    </div>
+                  </div>
+                </div>
+
 
                 <div class="form-group mb-5">
-                  <label class="text-black" for="message">Message</label>
-                  <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+                  <label class="text-black" for="message">Type Your Message</label>
+                  <textarea name="message" class="form-control" id="message" cols="30" rows="5"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary-hover-outline">Send Message</button>
-              </form> --}}
+                <input type="submit" class="btn btn-primary-hover-outline" value="Send Message">
+                
+              </form> 
+
 
             </div>
 
@@ -113,14 +133,7 @@
 
     </div>
   </div>
-
   <!-- End Contact Form -->
-
-
-
-
-
-
 
 
 @endsection
