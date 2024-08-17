@@ -1,4 +1,8 @@
+@php
+  
+  $allfooter = App\Models\Footer::find(1);
 
+@endphp
 
 <footer class="footer-section">
   <div class="container relative">
@@ -30,31 +34,47 @@
       </div>
     </div> --}}
 
-    <div class="row g-5 mb-5">
+    <div class="row g-5 mb-5 text-center">
       <div class="col-lg-4">
-        <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">CalRwanda<span>.</span></a></div>
+        <div class="mb-4 footer-logo-wrap"><div class="footer-logo"><span><h3>{{ $allfooter->contact_title }}</h3></span></div></div>
+        
+          <h4>{{ $allfooter->contact }}</h4>
+          <h4>{{ $allfooter->email }}</h4>
+      </div>
+      <div class="col-lg-4">
+        <div class="mb-4 footer-logo-wrap"><div class="footer-logo"><span><h3>{{ $allfooter->address_title }}</h3></span></div></div>
+        
+          <h4>{{ $allfooter->address }}</h4>
+        
+       </div>
+
+       <div class="col-lg-4">
+        <div class="mb-4 footer-logo-wrap"><div class="footer-logo"><span><h3>{{ $allfooter->follow_title }}</h3></span></div></div>
         
         <ul class="list-unstyled custom-social">
-          <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-          <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-          <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-          <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+          <li><a href="{{ $allfooter->facebbok }}"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+          <li><a href="{{ $allfooter->tweeter }}"><span class="fa fa-brands fa-twitter"></span></a></li>
+          <li><a href="{{ $allfooter->instagram }}"><span class="fa fa-brands fa-instagram"></span></a></li>
+          <li><a href="{{ $allfooter->linkedin }}"><span class="fa fa-brands fa-linkedin"></span></a></li>
         </ul>
-      </div>
-
+       </div>
     </div>
+
+    <div class="col-lg-6 text-center text-lg-end">
+
+       </div>
 
     <div class="border-top copyright">
       <div class="row pt-4">
         <div class="col-lg-6">
-          <p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; CAL Rwanda <a href="#"></a> <!-- License information: https://untree.co/license/ -->
+          <p class="mb-2 text-center text-lg-start">{!! $allfooter->copyright !!}  <a href="#"></a> <!-- <script>document.write(new Date().getFullYear());</script> -->
         </p>
         </div>
 
         <div class="col-lg-6 text-center text-lg-end">
           <ul class="list-unstyled d-inline-flex ms-auto">
-            <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li class="me-4"><a href="#">{{ $allfooter->terms_conditions }}</a></li>
+            
 
             <div class="row">
               <div class="col-lg-2">
@@ -64,7 +84,7 @@
                   <form action="#" class="row g-3">
                   
                     <div class="col-auto">
-                      <br><br><br>
+                      <br>
                       <button class="btn btn-primary">
                         <span class="fa fa-paper-plane"></span>
                       </button>

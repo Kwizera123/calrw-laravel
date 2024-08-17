@@ -8,6 +8,7 @@ use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\HeaderService;
 use App\Http\Controllers\Home\ContactController;
+use App\Http\Controllers\Home\FooterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,6 +101,13 @@ use App\Http\Controllers\Home\ContactController;
       Route::get('/delete/message/{id}', 'DeleteMessage')->name('delete.message');
   
    });
+
+       // Footer routes
+       Route::controller(FooterController::class)->group(function(){
+         Route::get('/footer/setup', 'FooterSetup')->name('footer.setup');
+         Route::post('/update/footer', 'UpdateFooter')->name('update.footer');
+     
+      });
     
     
 
