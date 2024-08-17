@@ -1,8 +1,9 @@
 
-		
-		@php
-		$aboutpage =  App\Models\About::find(1);
- 		@endphp
+@php
+  
+  $allheader  = App\Models\Header::find(1);
+
+@endphp
 		
 		<!-- Start Hero Section -->
 	  <div class="hero">
@@ -11,11 +12,14 @@
           <div class="col-lg-10">
             <div class="intro-excerpt">
 
-              <div class="author-pic">
-                <img src="" alt="Maria Jones" class="img-fluid">
-              </div>
-              <h2><span clsas="d-block">CAL Rwanda</span></h2>
-              <p class="mb-3">Collection Africa Ltd (CAL) is a Rwandan debt collection agency established in 2010. We specialize in professional and automated debt collection services, operating under regulations set forth by the Central Bank of Rwanda. This helps to decrease default rates and enables individuals and enterprises to better manage their loans. 
+							<div class="author-info">
+								<div class="author-pic">
+									<img src="{{$allheader->photo}}" alt="Maria Jones" class="img-fluid">
+								</div>
+								
+							</div>
+              <h2><span clsas="d-block">{{$allheader->title}}</span></h2>
+              <p class="mb-3">{{$allheader->description}}
               </p>
               
             </div>

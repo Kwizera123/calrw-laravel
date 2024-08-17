@@ -9,6 +9,7 @@ use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\HeaderService;
 use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Home\FooterController;
+use App\Http\Controllers\Home\HeaderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,6 +109,13 @@ use App\Http\Controllers\Home\FooterController;
          Route::post('/update/footer', 'UpdateFooter')->name('update.footer');
      
       });
+
+             // Footer routes
+             Route::controller(HeaderController::class)->group(function(){
+               Route::get('/header/setup', 'HeaderSetup')->name('header.setup');
+               Route::post('/update/header', 'UpdateHeader')->name('update.header');
+           
+            });
     
     
 

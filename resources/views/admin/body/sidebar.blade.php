@@ -73,6 +73,17 @@
               <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                     <i class="ri-profile-line"></i>
+                    <span>Header Page Setup</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="{{  route('header.setup') }}">Header Setup</a></li>
+                  
+                </ul>
+            </li> 
+
+              <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                    <i class="ri-profile-line"></i>
                     <span>Footer Page Setup</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
