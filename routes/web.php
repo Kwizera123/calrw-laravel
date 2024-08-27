@@ -10,11 +10,14 @@ use App\Http\Controllers\Home\HeaderService;
 use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\HeaderController;
-
+use App\Http\Controllers\Home\ApproachController;
+use App\Http\Controllers\Home\StagesController;
+use App\Http\Controllers\Home\StagesTwoController;
+use App\Http\Controllers\Home\StagesThreeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
-|--------------------------------------------------------------------------
+|------------------- -------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
@@ -110,14 +113,56 @@ use App\Http\Controllers\Home\HeaderController;
      
       });
 
-             // Footer routes
-             Route::controller(HeaderController::class)->group(function(){
-               Route::get('/header/setup', 'HeaderSetup')->name('header.setup');
-               Route::post('/update/header', 'UpdateHeader')->name('update.header');
-           
+   // Footer routes
+   Route::controller(HeaderController::class)->group(function(){
+   Route::get('/header/setup', 'HeaderSetup')->name('header.setup');
+   Route::post('/update/header', 'UpdateHeader')->name('update.header');
+
+});
+
+      // Approach routes
+      Route::controller(ApproachController::class)->group(function(){
+      Route::get('/approach/new', 'ApproachNew')->name('approach.new');
+      Route::post('/store/newapproach', 'StoreNewApproach')->name('store.newapproach');
+      Route::get('/all/approach', 'AllApproach')->name('all.approach');
+      Route::get('/approach/data/{id}', 'EditApproachData')->name('edit.approach.data');
+      Route::post('/update/approach', 'UpdateApproach')->name('update.approach');
+      Route::get('/delete/approach/data/{id}', 'DeleteApproachData')->name('delete.approach.data');
+
+   });
+
+     // Stage two routes 
+     Route::controller(StagesController::class)->group(function(){
+
+      Route::get('/all/stages', 'AllStages')->name('all.stages');
+      Route::get('/approach/stage/{id}', 'EditApproachStagesData')->name('edit.approach_stages.data');
+      Route::post('/update/stage', 'UpdateStage')->name('update.stage');
+      Route::get('/delete/stage/data/{id}', 'DeleteStageData')->name('delete.approach_stages.data');
+     
+   });
+
+
+        // Stage two routes
+        Route::controller(StagesTwoController::class)->group(function(){
+
+         Route::get('/stages/two', 'StagesTwo')->name('stages.two');
+         Route::get('/stage/two/{id}', 'EditStagesTwo')->name('edit.stages.two');
+          Route::post('/update/stage', 'UpdateStageTwo')->name('update.stagetwo');
+          Route::get('/delete/stage/two/{id}', 'DeleteStageTwo')->name('delete.stages.two');
+          Route::get('/create/stagetwo', 'CreateStagestwo')->name('create.stagestwo');
+          Route::post('/store/newstage', 'StoreNewStage')->name('store.newstage');
+      });
+
+            // Stage two routes
+            Route::controller(StagesThreeController::class)->group(function(){
+
+               Route::get('/stages/three', 'StagesThree')->name('stages.three');
+               // Route::get('/stage/two/{id}', 'EditStagesTwo')->name('edit.stages.two');
+               //  Route::post('/update/stage', 'UpdateStageTwo')->name('update.stagetwo');
+               //  Route::get('/delete/stage/two/{id}', 'DeleteStageTwo')->name('delete.stages.two');
+               //  Route::get('/create/stagetwo', 'CreateStagestwo')->name('create.stagestwo');
+               //  Route::post('/store/newstage', 'StoreNewStage')->name('store.newstage');
             });
-    
-    
 
 // Route::get('/about', function () {  delete.our.service 
 //     return view('about');

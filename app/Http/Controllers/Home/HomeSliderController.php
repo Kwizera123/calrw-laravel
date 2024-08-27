@@ -106,7 +106,7 @@ class HomeSliderController extends Controller
 
             $notification = array(
                 'message' => 'Home Slide Data Deleted Successfully',
-                'alert-type' => 'danger'
+                'alert-type' => 'error'
             );
             return redirect()->route('allhome.slide')->with($notification);
     }

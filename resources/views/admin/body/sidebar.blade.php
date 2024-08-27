@@ -73,6 +73,19 @@
               <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                     <i class="ri-profile-line"></i>
+                    <span>Approach Setup</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="{{  route('all.approach') }}">All Approach Data</a></li>
+                    <li><a href="{{  route('all.stages') }}">Stage One Data</a></li>
+                    <li><a href="{{  route('stages.two') }}">Stage Two Data</a></li>
+                    <li><a href="{{ route('stages.three') }}">Stage Three Data</a></li>
+                </ul>
+            </li>
+
+              <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                    <i class="ri-profile-line"></i>
                     <span>Header Page Setup</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">

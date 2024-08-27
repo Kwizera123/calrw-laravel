@@ -9,6 +9,10 @@
 		@include('frontend.home_all.choose_us')
 		<!-- End Why Choose Us Section -->
 
+		@php
+   $allapproach = App\Models\Approach::find(2);
+   $allapproach = App\Models\Approach::all();
+		@endphp
     <div class="we-help-section">
 			<div class="container">
 				<div class="row justify-content-between">
@@ -20,22 +24,33 @@
 						</div>
 					</div>
 					<div class="col-lg-5 ps-lg-5">
-						<h2 class="section-title mb-4">APPROACH</h2>
+						<h2 class="section-title mb-4">Approach</h2>
 						<p>CAL Rwanda utilizes a multi-tiered approach that progressively intensifies collection efforts as debts age</p>
 
+						
 						<ul class="list-unstyled custom-list my-4">
-							<strong>• Stage 1: Early Intervention (1-2 Days After received the  files)</strong>
-							<li>Our team initiates friendly communication through phone calls, emails, and SMS.</li>
-							<li>We focus on clear communication regarding the outstanding balance and offer flexible payment options.</li>
+							<strong>•	Stage 1: Early Intervention (1-2 Days After received the  files)</strong><br>
+							
+							
+							 <li>Our team initiates friendly communication through phone calls, emails, and SMS.</li>
+							 <li>We focus on clear communication regarding the outstanding balance and offer flexible payment options.</li>
 							<li>The goal is to secure a payment commitment or establish a manageable repayment plan.</li>
 						</ul>
+						
 
-						<ul class="list-unstyled custom-list my-4">
+						 <ul class="list-unstyled custom-list my-4">
 							<strong>•	Stage 2: Increased Efforts (3-7 Days After received the files)</strong>
 							<li>Communication frequency increases with a more assertive tone.</li>
 							<li>Our team negotiates repayment plans with clear deadlines.</li>
 							<li>If debtors cannot be reached at provided contact information, skip tracing techniques are employed to locate them.</li>
-						</ul>
+						</ul> 
+
+						<ul class="list-unstyled custom-list my-4">
+							<strong>•	Stage 3: Late Stage Collections (7+ After received the  files)</strong>
+							<li>Communication frequency increases with a more assertive tone.</li>
+							<li>Our team negotiates repayment plans with clear deadlines.</li>
+							<li>If debtors cannot be reached at provided contact information, skip tracing techniques are employed to locate them.</li>
+						</ul> 
 						
 					</div>
 				</div>

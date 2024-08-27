@@ -3,7 +3,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<!-- Start Hero Section -->
-    <div class="hero">
+    {{-- <div class="hero">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-lg-5">
@@ -18,7 +18,8 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
+    @include('frontend.home_all.home_header')
   <!-- End Hero Section -->
 
 
