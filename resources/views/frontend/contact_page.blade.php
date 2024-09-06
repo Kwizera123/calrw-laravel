@@ -1,16 +1,27 @@
 @extends('frontend.main_master')
 @section('main')
 
+@php
+$allheader  = App\Models\Header::find(1);
+$address  = App\Models\Contactdetail::find(1);
+
+//$contactaddr = App\Models\Contactdetail::all();
+@endphp
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<!-- Start Hero Section -->
-    {{-- <div class="hero">
+     <div class="hero">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-lg-5">
+            <img src="{{ asset($allheader->photo)}}" alt="Cal Rwanda" class="log">
             <div class="intro-excerpt">
-              <h1>Contact Us</h1>
+              
             </div>
-          </div>
+            
+          </div><br><br><br><br>
+          <p class="mb-3">
+          </p>
           <div class="col-lg-7">
             <div class="hero-img-wrap">
               
@@ -18,8 +29,8 @@
           </div>
         </div>
       </div>
-    </div> --}}
-    @include('frontend.home_all.home_header')
+    </div> 
+    {{-- @include('frontend.home_all.home_header') --}}
   <!-- End Hero Section -->
 
 
@@ -44,6 +55,7 @@
                       </svg>
                     </div> <!-- /.icon -->
                     <div class="service-contents">
+                      {{-- {{ $address->location }} --}}
                       <p>Centenary House, 4th Floor, KN 5 AV</p>
                     </div> <!-- /.service-contents-->
                   </div> <!-- /.service -->

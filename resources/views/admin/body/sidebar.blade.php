@@ -66,7 +66,7 @@
                   </a>
                   <ul class="sub-menu" aria-expanded="false">
                       <li><a href="{{  route('contact.message') }}">Contact Message</a></li>
-                    
+                      <li><a href="{{  route('contact.detail') }}">Contact Address</a></li>
                   </ul>
               </li> 
 

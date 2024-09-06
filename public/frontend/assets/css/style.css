@@ -9,6 +9,13 @@ body {
   overflow-x: hidden;
   position: relative; }
 
+  .log {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;

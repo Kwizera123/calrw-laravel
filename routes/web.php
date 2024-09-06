@@ -14,9 +14,10 @@ use App\Http\Controllers\Home\ApproachController;
 use App\Http\Controllers\Home\StagesController;
 use App\Http\Controllers\Home\StagesTwoController;
 use App\Http\Controllers\Home\StagesThreeController;
+use App\Http\Controllers\Home\contactDetailsController;
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes 
 |------------------- -------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -136,7 +137,7 @@ use App\Http\Controllers\Home\StagesThreeController;
 
       Route::get('/all/stages', 'AllStages')->name('all.stages');
       Route::get('/approach/stage/{id}', 'EditApproachStagesData')->name('edit.approach_stages.data');
-      Route::post('/update/stage', 'UpdateStage')->name('update.stage');
+      Route::post('/update/stageone', 'UpdateStageone')->name('update.stageone');
       Route::get('/delete/stage/data/{id}', 'DeleteStageData')->name('delete.approach_stages.data');
      
    });
@@ -157,12 +158,24 @@ use App\Http\Controllers\Home\StagesThreeController;
             Route::controller(StagesThreeController::class)->group(function(){
 
                Route::get('/stages/three', 'StagesThree')->name('stages.three');
-               // Route::get('/stage/two/{id}', 'EditStagesTwo')->name('edit.stages.two');
-               //  Route::post('/update/stage', 'UpdateStageTwo')->name('update.stagetwo');
-               //  Route::get('/delete/stage/two/{id}', 'DeleteStageTwo')->name('delete.stages.two');
-               //  Route::get('/create/stagetwo', 'CreateStagestwo')->name('create.stagestwo');
-               //  Route::post('/store/newstage', 'StoreNewStage')->name('store.newstage');
+                Route::get('/stage/three/{id}', 'EditStagesThree')->name('edit.stages.three');
+                Route::post('/update/stagethree', 'UpdateStageThree')->name('update.stagethree');
+               Route::get('/delete/stage/three/{id}', 'DeleteStageThree')->name('delete.stages.three');
+               Route::get('/create/stagethree', 'CreateStagesthree')->name('create.stagesthree');
+               Route::post('/store/stagethree', 'StoreStageThree')->name('store.stagethree');
             });
+
+         // Stage two routes
+         Route::controller(contactDetailsController::class)->group(function(){
+
+            Route::get('/contact/detail', 'ContactDetail')->name('contact.detail');
+            Route::get('/create/address', 'CreateContAddress')->name('address.new');
+            Route::post('/store/address', 'StoreAddress')->name('store.address');
+            Route::get('/contact/address/{id}', 'EditContactAddress')->name('edit.address.data');
+            Route::post('/contact/address', 'UpdateContactAddress')->name('update.contactaddrees');
+            Route::get('/delete/contact/address/{id}', 'DeleteContactAddress')->name('delete.address.data'); 
+            
+         });
 
 // Route::get('/about', function () {  delete.our.service 
 //     return view('about');

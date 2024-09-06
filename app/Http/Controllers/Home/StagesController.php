@@ -16,25 +16,25 @@ class StagesController extends Controller
     }// End Method 
 
     public function EditApproachStagesData($id){
-        $editapproacstagedata = Stageone::findOrFail($id);
-        return view('admin.approach.editapproach_stages',compact('editapproacstagedata'));
+        $editstageone = Stageone::findOrFail($id);
+        return view('admin.approach.editapproach_stages',compact('editstageone'));
     }// End Method
-    public function UpdateStage(Request $request){
-        $stage_id = $request->id;
+     public function UpdateStageone(Request $request){
+         $stage_id = $request->id;
 
-        Stageone::findOrFail($stage_id)->update([
-            'stageone' => $request->stageone,
-            'article' => $request->article,
-            'article_one' => $request->article_one,
-            'article_two' => $request->article_two, 
-        ]);
-        $notification = array(
-            'message' => 'One of Stages or All Stages Data Updated Successfully',
-            'alert-type' => 'info'
-        );
-        return redirect()->route('all.stages')->with($notification);
+         Stageone::findOrFail($stage_id)->update([
+             'stageone' => $request->stageone,
+             'article' => $request->article,
+             'article_one' => $request->article_one,
+             'article_two' => $request->article_two, 
+         ]);
+         $notification = array(
+             'message' => 'One of Stages or All Stages Data Updated Successfully',
+             'alert-type' => 'info'
+         );
+         return redirect()->route('all.stages')->with($notification);
 
-    }// End Method
+     }// End Method
 
     public function DeleteStageData($id){
         $stagedata = Stageone::findOrFail($id);
@@ -47,27 +47,10 @@ class StagesController extends Controller
 
         $notification = array(
             'message' => 'Stage One Approach DataDeleted Successfully',
-            'alert-type' => 'danger'
+            'alert-type' => 'error'
         );
         return redirect()->back()->with($notification);
     
     }// End Method
 
-
-    public function DeleteStageThreeData($id){
-        $stagethree = Stageone::findOrFail($id);
-        $stagethree = $stagethree->stagethree;
-        $article_1 = $stagethree->article_1;
-        $article_2 = $stagethree->article_2;
-        $article_3 = $stagethree->article_3;
-
-        Stageone::findOrFail($id)->delete();
-
-        $notification = array(
-            'message' => 'Stage Three Approach Data Deleted Successfully',
-            'alert-type' => 'danger'
-        );
-        return redirect()->back()->with($notification);
-    
-    }// End Method
 }

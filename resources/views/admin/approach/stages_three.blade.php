@@ -10,7 +10,7 @@
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                     <h4 class="mb-sm-0">Three Stages Approach Data | CAL</h4>
-                    <a href="{{  route('create.stagestwo') }}" type="button" class="fc-dayGridMonth-button btn btn-primary active">Create Stage Two</a>
+                    <a href="{{  route('create.stagesthree') }}" type="button" class="fc-dayGridMonth-button btn btn-primary active">Create Stage Three</a>
                 </div>
             </div>
         </div>
@@ -51,8 +51,8 @@
                                         <td>{{ $itemthree->article_2}}</td>
                                         <td>{{ $itemthree->article_3}}</td>
                                         <td>
-                  <a href="{{ route('edit.stages.two',$itemtwo->id)}}" class="btn btn-info sm" title="Edit Data"> <i class="fas fa-edit"></i></a>
-                   <a href="{{ route('delete.stages.two',$itemtwo->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete"> <i class="fas fa-trash-alt"></i></a>
+                  <a href="{{ route('edit.stages.three',$itemthree->id)}}" class="btn btn-info sm" title="Edit Data"> <i class="fas fa-edit"></i></a>
+                   <a href="{{ route('delete.stages.three',$itemthree->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete"> <i class="fas fa-trash-alt"></i></a>
           
                                         </td>
                                     </tr>
