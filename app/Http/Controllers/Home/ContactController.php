@@ -38,6 +38,8 @@ class ContactController extends Controller
         return view('admin.contact.allcontact',compact('contact'));
     }// End Method
 
+
+
     public function DeleteMessage($id){
         Contact::findOrFail($id)->delete();
 

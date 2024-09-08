@@ -11,6 +11,7 @@ class StagesController extends Controller
 {
      //for stages   
      public function AllStages(){
+        $stages = Stageone::find(1);
         $stages = Stageone::all();
         return view('admin.approach.all_stages',compact('stages'));
     }// End Method 

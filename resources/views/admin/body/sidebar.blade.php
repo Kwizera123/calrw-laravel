@@ -13,8 +13,14 @@
               <li class="menu-title">Menu</li>
 
               <li>
-                  <a href="index.html" class="waves-effect">
-                      <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
+                  <a href="{{ url('/dashboard')}}" class="waves-effect">
+                    @php
+                    $id = Auth::user()->id;
+                    $adminData = App\Models\User::find($id);
+                    @endphp
+                      <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">{{ $id++}}</span>
+                      
+                      
                       <span>Dashboard</span>
                   </a>
               </li>

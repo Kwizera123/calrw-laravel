@@ -42,7 +42,7 @@
           
                                     <tbody>
                                       @php($i = 1)
-                                      @foreach ($stages as $itemtwo )
+                                      @foreach ($sttwo as $itemtwo )
                                       
                                     <tr>
                                         <td>{{ $i++}}</td>

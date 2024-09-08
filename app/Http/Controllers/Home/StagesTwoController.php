@@ -11,8 +11,9 @@ class StagesTwoController extends Controller
 {
          //for stages   
          public function StagesTwo(){
-            $stages = Stagetwo::all();
-            return view('admin.approach.stages_two',compact('stages'));
+            $sttwo = Stagetwo::find(1);
+            $sttwo = Stagetwo::all();
+            return view('admin.approach.stages_two',compact('sttwo'));
         }// End Method 
 
         public function EditStagesTwo($id){

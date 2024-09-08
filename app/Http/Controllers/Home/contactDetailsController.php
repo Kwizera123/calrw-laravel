@@ -10,6 +10,7 @@ use Illuminate\Support\Carbon;
 class contactDetailsController extends Controller
 {
     public function ContactDetail(){
+        $contactaddr = Contactdetail::find(1);
         $contactaddr = Contactdetail::all();
         return view('admin.contactdetails.index_contact',compact('contactaddr'));
     }// End Method

@@ -12,7 +12,7 @@
 
                   <div class="page-title-right">
                       <ol class="breadcrumb m-0">
-                          <li class="breadcrumb-item"><a href="javascript: void(0);">Upcube</a></li>
+                          <li class="breadcrumb-item"><a href="javascript: void(0);">CAL</a></li>
                           <li class="breadcrumb-item active">Dashboard</li>
                       </ol>
                   </div>
@@ -23,36 +23,40 @@
       <!-- end page title -->
 
       <div class="row">
+
+                 
+        
           <div class="col-xl-3 col-md-6">
               <div class="card">
                   <div class="card-body">
                       <div class="d-flex">
                           <div class="flex-grow-1">
-                              <p class="text-truncate font-size-14 mb-2">Total Sales</p>
-                              <h4 class="mb-2">1452</h4>
+                              <p class="text-truncate font-size-14 mb-2">Contact Message</p>
+                              <h4 class="mb-2">3</h4>
                               <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>9.23%</span>from previous period</p>
                           </div>
                           <div class="avatar-sm">
                               <span class="avatar-title bg-light text-primary rounded-3">
-                                  <i class="ri-shopping-cart-2-line font-size-24"></i>  
+                                  <i class="ri-user-3-line font-size-24"></i>  
                               </span>
                           </div>
                       </div>                                            
                   </div><!-- end cardbody -->
               </div><!-- end card -->
           </div><!-- end col -->
+          
           <div class="col-xl-3 col-md-6">
               <div class="card">
                   <div class="card-body">
                       <div class="d-flex">
                           <div class="flex-grow-1">
-                              <p class="text-truncate font-size-14 mb-2">New Orders</p>
-                              <h4 class="mb-2">938</h4>
-                              <p class="text-muted mb-0"><span class="text-danger fw-bold font-size-12 me-2"><i class="ri-arrow-right-down-line me-1 align-middle"></i>1.09%</span>from previous period</p>
+                              <p class="text-truncate font-size-14 mb-2">Services</p>
+                              <h4 class="mb-2">3</h4>
+                              <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>0.09%</span>from previous period</p>
                           </div>
                           <div class="avatar-sm">
                               <span class="avatar-title bg-light text-success rounded-3">
-                                  <i class="mdi mdi-currency-usd font-size-24"></i>  
+                                  <i class="ri-user-3-line font-size-24"></i>  
                               </span>
                           </div>
                       </div>                                              
@@ -64,9 +68,9 @@
                   <div class="card-body">
                       <div class="d-flex">
                           <div class="flex-grow-1">
-                              <p class="text-truncate font-size-14 mb-2">New Users</p>
-                              <h4 class="mb-2">8246</h4>
-                              <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>16.2%</span>from previous period</p>
+                              <p class="text-truncate font-size-14 mb-2">Users</p>
+                              <h4 class="mb-2">1</h4>
+                              <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>00.1%</span>from previous Month</p>
                           </div>
                           <div class="avatar-sm">
                               <span class="avatar-title bg-light text-primary rounded-3">
@@ -83,8 +87,8 @@
                       <div class="d-flex">
                           <div class="flex-grow-1">
                               <p class="text-truncate font-size-14 mb-2">Unique Visitors</p>
-                              <h4 class="mb-2">29670</h4>
-                              <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>11.7%</span>from previous period</p>
+                              <h4 class="mb-2">7</h4>
+                              <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>00.7%</span>from previous period</p>
                           </div>
                           <div class="avatar-sm">
                               <span class="avatar-title bg-light text-success rounded-3">
@@ -129,7 +133,7 @@
                               </thead><!-- end thead -->
                               <tbody>
                                   <tr>
-                                      <td><h6 class="mb-0">Charles Casey</h6></td>
+                                      <td><h6 class="mb-0">Kwizera Sinapy</h6></td>
                                       <td>Web Developer</td>
                                       <td>
                                           <div class="font-size-13"><i class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active</div>
@@ -144,8 +148,8 @@
                                   </tr>
                                    <!-- end -->
                                    <tr>
-                                      <td><h6 class="mb-0">Alex Adams</h6></td>
-                                      <td>Python Developer</td>
+                                      <td><h6 class="mb-0">Kwizera Theo</h6></td>
+                                      <td>Laravel Developer</td>
                                       <td>
                                           <div class="font-size-13"><i class="ri-checkbox-blank-circle-fill font-size-10 text-warning align-middle me-2"></i>Deactive</div>
                                       </td>
@@ -159,7 +163,7 @@
                                   </tr>
                                    <!-- end -->
                                    <tr>
-                                      <td><h6 class="mb-0">Prezy Kelsey</h6></td>
+                                      <td><h6 class="mb-0">Kwizera T</h6></td>
                                       <td>Senior Javascript Developer</td>
                                       <td>
                                           <div class="font-size-13"><i class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active</div>
@@ -174,7 +178,7 @@
                                   </tr>
                                    <!-- end -->
                                    <tr>
-                                      <td><h6 class="mb-0">Ruhi Fancher</h6></td>
+                                      <td><h6 class="mb-0">Kwizera S</h6></td>
                                       <td>React Developer</td>
                                       <td>
                                           <div class="font-size-13"><i class="ri-checkbox-blank-circle-fill font-size-10 text-success align-middle me-2"></i>Active</div>
@@ -188,7 +192,7 @@
                                       <td>$23,700</td>
                                   </tr>
                                    <!-- end -->
-                                   <tr>
+                                   {{-- <tr>
                                       <td><h6 class="mb-0">Juliet Pineda</h6></td>
                                       <td>Senior Web Designer</td>
                                       <td>
@@ -201,9 +205,9 @@
                                           01 Jan, 2021
                                       </td>
                                       <td>$69,185</td>
-                                  </tr>
+                                  </tr> --}}
                                    <!-- end -->
-                                   <tr>
+                                   {{-- <tr>
                                       <td><h6 class="mb-0">Den Simpson</h6></td>
                                       <td>Web Designer</td>
                                       <td>
@@ -216,9 +220,9 @@
                                           01 Sep, 2021
                                       </td>
                                       <td>$37,845</td>
-                                  </tr>
+                                  </tr> --}}
                                    <!-- end -->
-                                   <tr>
+                                   {{-- <tr>
                                       <td><h6 class="mb-0">Mahek Torres</h6></td>
                                       <td>Senior Laravel Developer</td>
                                       <td>
@@ -231,7 +235,7 @@
                                           20 May, 2021
                                       </td>
                                       <td>$55,100</td>
-                                  </tr>
+                                  </tr> --}}
                                    <!-- end -->
                               </tbody><!-- end tbody -->
                           </table> <!-- end table -->

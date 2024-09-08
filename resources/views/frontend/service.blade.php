@@ -8,6 +8,7 @@
    //$servicepage = App\Models\HeaderService::all();
    //use App\Models\HeaderService as Header;
    //$ourteam = App\Models\OurTeam::find(1);
+   $allheader  = App\Models\Header::find(1);
 @endphp
 
 		<!-- Start Hero Section -->
@@ -15,16 +16,14 @@
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-lg-5">
+            <img src="{{ asset($allheader->photo)}}" alt="Cal Rwanda" class="log">
             <div class="intro-excerpt">
-              <h1>{{$servicepage->service_header}}</h1>
-              <p class="mb-4">{!!$servicepage->service_description!!}</p>
-              
+      <br>
             </div>
+            <h1 class="mb-3">{{$servicepage->service_header}}</h1>
           </div>
-          <div class="col-lg-7">
-            <div class="hero-img-wrap">
-              {{-- <img src="assets/images/couch.png" class="img-fluid"> --}}
-            </div>
+          <div class="col-lg-8">
+            <p {!!$servicepage->service_description!!}</p>
           </div>
         </div>
       </div>

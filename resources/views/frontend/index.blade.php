@@ -10,8 +10,15 @@
 		<!-- End Why Choose Us Section -->
 
 		@php
-   $allapproach = App\Models\Approach::find(2);
-   $allapproach = App\Models\Approach::all();
+   $approach = App\Models\Approach::find(1);
+  //  $approach = App\Models\Approach::all();
+		$stages = App\Models\Stageone::find(1);
+	
+		$sttwo = App\Models\Stagetwo::find(1);
+
+		$stagesthree = App\Models\Stagethree::find(1);
+	
+	
 		@endphp
     <div class="we-help-section">
 			<div class="container">
@@ -24,32 +31,35 @@
 						</div>
 					</div>
 					<div class="col-lg-5 ps-lg-5">
-						<h2 class="section-title mb-4">Approach</h2>
-						<p>CAL Rwanda utilizes a multi-tiered approach that progressively intensifies collection efforts as debts age</p>
+						<h2 class="section-title mb-4">{{$approach->title}}</h2>
+						<p>{{$approach->subtitle}}</p>
 
 						
 						<ul class="list-unstyled custom-list my-4">
-							<strong>•	Stage 1: Early Intervention (1-2 Days After received the  files)</strong><br>
+							
+							<strong>•	{{$stages->stageone}}</strong><br>
 							
 							
-							 <li>Our team initiates friendly communication through phone calls, emails, and SMS.</li>
-							 <li>We focus on clear communication regarding the outstanding balance and offer flexible payment options.</li>
-							<li>The goal is to secure a payment commitment or establish a manageable repayment plan.</li>
+							 <li>{{$stages->article}}</li>
+							 <li>{{$stages->article_one}}</li>
+							<li>{{$stages->article_two}}</li>
 						</ul>
 						
 
 						 <ul class="list-unstyled custom-list my-4">
-							<strong>•	Stage 2: Increased Efforts (3-7 Days After received the files)</strong>
-							<li>Communication frequency increases with a more assertive tone.</li>
-							<li>Our team negotiates repayment plans with clear deadlines.</li>
-							<li>If debtors cannot be reached at provided contact information, skip tracing techniques are employed to locate them.</li>
+							{{--  --}}
+							
+							<strong>•	{{$sttwo->stagetwo}}</strong><br>
+							<li>{{$sttwo->article1}}</li>
+							<li>{{$sttwo->article2}}</li>
+							<li>{{$sttwo->article3}}</li>
 						</ul> 
 
 						<ul class="list-unstyled custom-list my-4">
-							<strong>•	Stage 3: Late Stage Collections (7+ After received the  files)</strong>
-							<li>Communication frequency increases with a more assertive tone.</li>
-							<li>Our team negotiates repayment plans with clear deadlines.</li>
-							<li>If debtors cannot be reached at provided contact information, skip tracing techniques are employed to locate them.</li>
+							<strong>• {{$stagesthree->stagethree}}</strong>
+							<li>{{$stagesthree->article_1}}</li>
+							<li>{{$stagesthree->article_2}}</li>
+							<li>{{$stagesthree->article_3}}</li>
 						</ul> 
 						
 					</div>

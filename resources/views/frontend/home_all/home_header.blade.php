@@ -11,21 +11,20 @@
         <div class="row justify-content-between">
           <div class="col-lg-4">
             <div class="intro-excerpt">
-
+              <img src="{{$allheader->photo}}" alt="Cal Rwanda" class="log">
 							<div class="author-info">
 								<div class="author-pic">
-									<img src="{{$allheader->photo}}" alt="Cal Rwanda" class="log">
+									<br>
 								</div>
 								
 							</div>
-              <h2><span clsas="d-block"></span></h2>
-              {{-- use to display title "{{$allheader->title}}" --}}
-              <p class="mb-3">{{$allheader->description}}
-              </p>
               
+              <h1 class="mb-3">{{$allheader->title}}</h1>
             </div>
+            
+            </p>
           </div>
-
+          <p class="col-lg-12">{{$allheader->description}}
         </div>
       </div>
     </div>

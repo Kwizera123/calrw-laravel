@@ -10,6 +10,7 @@ use Illuminate\Support\Carbon;
 class StagesThreeController extends Controller
 {
     public function StagesThree(){
+        $stagesthree = Stagethree::find(1);
         $stagesthree = Stagethree::all();
         return view('admin.approach.stages_three',compact('stagesthree'));
     }// End Method 

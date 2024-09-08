@@ -11,6 +11,7 @@ class ApproachController extends Controller
 {
     public function ApproachNew(){
         $approach = Approach::find(1);
+        $approach = Approach::all();
         return view('admin.approach.approach_new',compact('approach'));
 
     }// End Method 
